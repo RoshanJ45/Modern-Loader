@@ -1,0 +1,60 @@
+<html>
+<body>
+    <style>
+        *
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: #111;
+}
+.loader {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: 6px solid transparent;
+border-top: 6px solid #ff7700;
+border-right: 6px solid #ff7700;
+position: relative;
+animation: spin 1.5s linear infinite;
+}
+.loader::before {
+content: "";
+position: absolute;
+top: 6px;
+left: 6px;
+right: 6px;
+bottom: 6px;
+border-radius: 50%;
+border: 6px solid transparent;
+border-top: 6px solid #00ff99;
+border-right: 6px solid #00ff99;
+animation: spin 1s linear infinite reverse;
+}
+.loader::after {
+content: "";
+position: absolute;
+top: 15px;
+left: 15px;
+right: 15px;
+bottom: 15px;
+border-radius: 50%;
+border: 6px solid transparent;
+border-top: 6px solid #ff0066;
+border-right: 6px solid #ff0066;
+animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+    </style>
+<div class="loader"></div>
+</body>
+</html>
